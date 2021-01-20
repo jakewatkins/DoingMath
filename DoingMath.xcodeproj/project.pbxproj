@@ -463,6 +463,7 @@
 				DEVELOPMENT_TEAM = 8YCWAW89BH;
 				IBSC_MODULE = DoingMath_WatchKit_Extension;
 				INFOPLIST_FILE = "DoingMath WatchKit App/Info.plist";
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GuerillaProgrammer.DoingMath.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -483,6 +484,7 @@
 				DEVELOPMENT_TEAM = 8YCWAW89BH;
 				IBSC_MODULE = DoingMath_WatchKit_Extension;
 				INFOPLIST_FILE = "DoingMath WatchKit App/Info.plist";
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GuerillaProgrammer.DoingMath.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
