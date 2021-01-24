@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "DoingMath-38-not.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -8,6 +9,7 @@
       "subtype" : "38mm"
     },
     {
+      "filename" : "DoingMath-40-not.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -15,18 +17,21 @@
       "subtype" : "42mm"
     },
     {
+      "filename" : "DoingMath-44-settings.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "DoingMath-3x-settings.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
+      "filename" : "DoingMath-38-home.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -34,6 +39,7 @@
       "subtype" : "38mm"
     },
     {
+      "filename" : "DoingMath-40-home.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -41,6 +47,7 @@
       "subtype" : "40mm"
     },
     {
+      "filename" : "DoingMath-44-home.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -48,6 +55,7 @@
       "subtype" : "44mm"
     },
     {
+      "filename" : "DoingMath-38-short.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -55,6 +63,7 @@
       "subtype" : "38mm"
     },
     {
+      "filename" : "DoingMath-40-short.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -62,6 +71,7 @@
       "subtype" : "42mm"
     },
     {
+      "filename" : "DoingMath-44-short.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -69,6 +79,7 @@
       "subtype" : "44mm"
     },
     {
+      "filename" : "DoingMath-app-store.png",
       "idiom" : "watch-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
