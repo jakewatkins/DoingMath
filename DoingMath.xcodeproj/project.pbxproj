@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37A8C88425BDE87400FD3D9F /* DoingMathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8C88325BDE87400FD3D9F /* DoingMathApp.swift */; };
+		37A8C88625BDE87400FD3D9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8C88525BDE87400FD3D9F /* ContentView.swift */; };
+		37A8C88825BDE87600FD3D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A8C88725BDE87600FD3D9F /* Assets.xcassets */; };
+		37A8C88B25BDE87600FD3D9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A8C88A25BDE87600FD3D9F /* Preview Assets.xcassets */; };
+		37A8C89025BDE87600FD3D9F /* DoingMath WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 37A8C88F25BDE87600FD3D9F /* DoingMath WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		37A8C89525BDE87700FD3D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A8C89425BDE87700FD3D9F /* Assets.xcassets */; };
+		37A8C89C25BDE87700FD3D9F /* DoingMath WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 37A8C89B25BDE87700FD3D9F /* DoingMath WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		37A8C8A125BDE87700FD3D9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8C8A025BDE87700FD3D9F /* ContentView.swift */; };
+		37A8C8A325BDE87700FD3D9F /* DoingMathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8C8A225BDE87700FD3D9F /* DoingMathApp.swift */; };
+		37A8C8A525BDE87700FD3D9F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8C8A425BDE87700FD3D9F /* ComplicationController.swift */; };
+		37A8C8A725BDE87700FD3D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A8C8A625BDE87700FD3D9F /* Assets.xcassets */; };
+		37A8C8AA25BDE87700FD3D9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A8C8A925BDE87700FD3D9F /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37A8C89125BDE87600FD3D9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37A8C87825BDE87400FD3D9F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37A8C88E25BDE87600FD3D9F;
+			remoteInfo = "DoingMath WatchKit App";
+		};
+		37A8C89D25BDE87700FD3D9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37A8C87825BDE87400FD3D9F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37A8C89A25BDE87700FD3D9F;
+			remoteInfo = "DoingMath WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		37A8C8B125BDE87700FD3D9F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				37A8C89C25BDE87700FD3D9F /* DoingMath WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37A8C8B525BDE87700FD3D9F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				37A8C89025BDE87600FD3D9F /* DoingMath WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		37A8C88025BDE87400FD3D9F /* DoingMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoingMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37A8C88325BDE87400FD3D9F /* DoingMathApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoingMathApp.swift; sourceTree = "<group>"; };
+		37A8C88525BDE87400FD3D9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		37A8C88725BDE87600FD3D9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37A8C88A25BDE87600FD3D9F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		37A8C88C25BDE87600FD3D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37A8C88F25BDE87600FD3D9F /* DoingMath WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DoingMath WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37A8C89425BDE87700FD3D9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37A8C89625BDE87700FD3D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37A8C89B25BDE87700FD3D9F /* DoingMath WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DoingMath WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37A8C8A025BDE87700FD3D9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		37A8C8A225BDE87700FD3D9F /* DoingMathApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoingMathApp.swift; sourceTree = "<group>"; };
+		37A8C8A425BDE87700FD3D9F /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		37A8C8A625BDE87700FD3D9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37A8C8A925BDE87700FD3D9F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		37A8C8AB25BDE87700FD3D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37A8C87D25BDE87400FD3D9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37A8C89825BDE87700FD3D9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37A8C87725BDE87400FD3D9F = {
+			isa = PBXGroup;
+			children = (
+				37A8C88225BDE87400FD3D9F /* DoingMath */,
+				37A8C89325BDE87600FD3D9F /* DoingMath WatchKit App */,
+				37A8C89F25BDE87700FD3D9F /* DoingMath WatchKit Extension */,
+				37A8C88125BDE87400FD3D9F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37A8C88125BDE87400FD3D9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37A8C88025BDE87400FD3D9F /* DoingMath.app */,
+				37A8C88F25BDE87600FD3D9F /* DoingMath WatchKit App.app */,
+				37A8C89B25BDE87700FD3D9F /* DoingMath WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37A8C88225BDE87400FD3D9F /* DoingMath */ = {
+			isa = PBXGroup;
+			children = (
+				37A8C88325BDE87400FD3D9F /* DoingMathApp.swift */,
+				37A8C88525BDE87400FD3D9F /* ContentView.swift */,
+				37A8C88725BDE87600FD3D9F /* Assets.xcassets */,
+				37A8C88C25BDE87600FD3D9F /* Info.plist */,
+				37A8C88925BDE87600FD3D9F /* Preview Content */,
+			);
+			path = DoingMath;
+			sourceTree = "<group>";
+		};
+		37A8C88925BDE87600FD3D9F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				37A8C88A25BDE87600FD3D9F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		37A8C89325BDE87600FD3D9F /* DoingMath WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				37A8C89425BDE87700FD3D9F /* Assets.xcassets */,
+				37A8C89625BDE87700FD3D9F /* Info.plist */,
+			);
+			path = "DoingMath WatchKit App";
+			sourceTree = "<group>";
+		};
+		37A8C89F25BDE87700FD3D9F /* DoingMath WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				37A8C8A025BDE87700FD3D9F /* ContentView.swift */,
+				37A8C8A225BDE87700FD3D9F /* DoingMathApp.swift */,
+				37A8C8A425BDE87700FD3D9F /* ComplicationController.swift */,
+				37A8C8A625BDE87700FD3D9F /* Assets.xcassets */,
+				37A8C8AB25BDE87700FD3D9F /* Info.plist */,
+				37A8C8A825BDE87700FD3D9F /* Preview Content */,
+			);
+			path = "DoingMath WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		37A8C8A825BDE87700FD3D9F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				37A8C8A925BDE87700FD3D9F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37A8C87F25BDE87400FD3D9F /* DoingMath */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37A8C8B625BDE87700FD3D9F /* Build configuration list for PBXNativeTarget "DoingMath" */;
+			buildPhases = (
+				37A8C87C25BDE87400FD3D9F /* Sources */,
+				37A8C87D25BDE87400FD3D9F /* Frameworks */,
+				37A8C87E25BDE87400FD3D9F /* Resources */,
+				37A8C8B525BDE87700FD3D9F /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37A8C89225BDE87600FD3D9F /* PBXTargetDependency */,
+			);
+			name = DoingMath;
+			productName = DoingMath;
+			productReference = 37A8C88025BDE87400FD3D9F /* DoingMath.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37A8C88E25BDE87600FD3D9F /* DoingMath WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37A8C8B225BDE87700FD3D9F /* Build configuration list for PBXNativeTarget "DoingMath WatchKit App" */;
+			buildPhases = (
+				37A8C88D25BDE87600FD3D9F /* Resources */,
+				37A8C8B125BDE87700FD3D9F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37A8C89E25BDE87700FD3D9F /* PBXTargetDependency */,
+			);
+			name = "DoingMath WatchKit App";
+			productName = "DoingMath WatchKit App";
+			productReference = 37A8C88F25BDE87600FD3D9F /* DoingMath WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		37A8C89A25BDE87700FD3D9F /* DoingMath WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37A8C8AE25BDE87700FD3D9F /* Build configuration list for PBXNativeTarget "DoingMath WatchKit Extension" */;
+			buildPhases = (
+				37A8C89725BDE87700FD3D9F /* Sources */,
+				37A8C89825BDE87700FD3D9F /* Frameworks */,
+				37A8C89925BDE87700FD3D9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DoingMath WatchKit Extension";
+			productName = "DoingMath WatchKit Extension";
+			productReference = 37A8C89B25BDE87700FD3D9F /* DoingMath WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37A8C87825BDE87400FD3D9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					37A8C87F25BDE87400FD3D9F = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					37A8C88E25BDE87600FD3D9F = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					37A8C89A25BDE87700FD3D9F = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 37A8C87B25BDE87400FD3D9F /* Build configuration list for PBXProject "DoingMath" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37A8C87725BDE87400FD3D9F;
+			productRefGroup = 37A8C88125BDE87400FD3D9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37A8C87F25BDE87400FD3D9F /* DoingMath */,
+				37A8C88E25BDE87600FD3D9F /* DoingMath WatchKit App */,
+				37A8C89A25BDE87700FD3D9F /* DoingMath WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37A8C87E25BDE87400FD3D9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37A8C88B25BDE87600FD3D9F /* Preview Assets.xcassets in Resources */,
+				37A8C88825BDE87600FD3D9F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37A8C88D25BDE87600FD3D9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37A8C89525BDE87700FD3D9F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37A8C89925BDE87700FD3D9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37A8C8AA25BDE87700FD3D9F /* Preview Assets.xcassets in Resources */,
+				37A8C8A725BDE87700FD3D9F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37A8C87C25BDE87400FD3D9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37A8C88625BDE87400FD3D9F /* ContentView.swift in Sources */,
+				37A8C88425BDE87400FD3D9F /* DoingMathApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37A8C89725BDE87700FD3D9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37A8C8A125BDE87700FD3D9F /* ContentView.swift in Sources */,
+				37A8C8A325BDE87700FD3D9F /* DoingMathApp.swift in Sources */,
+				37A8C8A525BDE87700FD3D9F /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37A8C89225BDE87600FD3D9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37A8C88E25BDE87600FD3D9F /* DoingMath WatchKit App */;
+			targetProxy = 37A8C89125BDE87600FD3D9F /* PBXContainerItemProxy */;
+		};
+		37A8C89E25BDE87700FD3D9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37A8C89A25BDE87700FD3D9F /* DoingMath WatchKit Extension */;
+			targetProxy = 37A8C89D25BDE87700FD3D9F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		37A8C8AC25BDE87700FD3D9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		37A8C8AD25BDE87700FD3D9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		37A8C8AF25BDE87700FD3D9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"DoingMath WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 8YCWAW89BH;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "DoingMath WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GuerillaProgrammer.DoingMath.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		37A8C8B025BDE87700FD3D9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"DoingMath WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 8YCWAW89BH;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "DoingMath WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GuerillaProgrammer.DoingMath.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		37A8C8B325BDE87700FD3D9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8YCWAW89BH;
+				IBSC_MODULE = DoingMath_WatchKit_Extension;
+				INFOPLIST_FILE = "DoingMath WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GuerillaProgrammer.DoingMath.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		37A8C8B425BDE87700FD3D9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8YCWAW89BH;
+				IBSC_MODULE = DoingMath_WatchKit_Extension;
+				INFOPLIST_FILE = "DoingMath WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GuerillaProgrammer.DoingMath.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		37A8C8B725BDE87700FD3D9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"DoingMath/Preview Content\"";
+				DEVELOPMENT_TEAM = 8YCWAW89BH;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DoingMath/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GuerillaProgrammer.DoingMath;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		37A8C8B825BDE87700FD3D9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"DoingMath/Preview Content\"";
+				DEVELOPMENT_TEAM = 8YCWAW89BH;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DoingMath/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GuerillaProgrammer.DoingMath;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37A8C87B25BDE87400FD3D9F /* Build configuration list for PBXProject "DoingMath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37A8C8AC25BDE87700FD3D9F /* Debug */,
+				37A8C8AD25BDE87700FD3D9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37A8C8AE25BDE87700FD3D9F /* Build configuration list for PBXNativeTarget "DoingMath WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37A8C8AF25BDE87700FD3D9F /* Debug */,
+				37A8C8B025BDE87700FD3D9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37A8C8B225BDE87700FD3D9F /* Build configuration list for PBXNativeTarget "DoingMath WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37A8C8B325BDE87700FD3D9F /* Debug */,
+				37A8C8B425BDE87700FD3D9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37A8C8B625BDE87700FD3D9F /* Build configuration list for PBXNativeTarget "DoingMath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37A8C8B725BDE87700FD3D9F /* Debug */,
+				37A8C8B825BDE87700FD3D9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37A8C87825BDE87400FD3D9F /* Project object */;
+}
