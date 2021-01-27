@@ -13,7 +13,7 @@ struct ContentView: View {
     @State var barSelected = false
     @State var symbol = "#"
     
-    let standardBar:[Int] = [45,45,15]
+    let standardBar:[Int] = [45,35,15]
     let metricBar:[Int] = [20, 15, 7]
     let standardWeights:[Float] = [55,45,35,25,15,10, 5, 2.5, 1]
     let metricWeights:[Float] =   [25,20,15,10, 7, 5,1.5,  1, 0.5]
@@ -82,7 +82,7 @@ struct ContentView: View {
                     Button(action: {AddWeight(weight: GetWeightValue(weightNum: 5))})
                     {
                         ZStack {
-                            Circle().strokeBorder(Color.black)
+                            Circle().strokeBorder(Color.black).background(Color(UIColor.white))
                                 .frame(width:60, height:60).foregroundColor(.white)
                             Text(GetWeightLabel(weightNum: 5)).foregroundColor(.black)
                         }
@@ -110,6 +110,7 @@ struct ContentView: View {
                                 .strokeBorder(Color.black)
                                 .frame(width:60,height:60)
                                 //.stroke(Color.black, lineWidth:1)
+                                .background(Color(UIColor.white))
                                 .foregroundColor(.white)
                             Text(GetWeightLabel(weightNum: 8)).foregroundColor(.black)
                         }

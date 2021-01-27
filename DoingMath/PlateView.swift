@@ -13,6 +13,7 @@ struct PlateView: View {
     @State var measureSystem : String = "Standard"
     @State var barWeight:Float = 45.0
     @State var symbol = "#"
+    @State var partialNeeded:Bool = false
     
     @State var weightIsOn:[Bool] = [true, true, true, true, true, true, true, true, true]
     @State var weightValue:[Float] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
@@ -25,30 +26,49 @@ struct PlateView: View {
     
     var body: some View {
         VStack {
-            Text("Plate Calculator")
             HStack {
                 Text("Weight")
                 NumberTextField(value: $weight)
             }
-            HStack {
-                Button(action: {SetMeasureSystem(ms:"Standard")}) {
+            Button(action:{CalcPlatesNeeded()}) {
+                Text("Calculate")
+                    .frame(width: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/30.0/*@END_MENU_TOKEN@*/)
+            }.border(Color.blue, width:1).padding(.bottom)
+            HStack(spacing: 10.0) {
+                Button(action: {SetMeasureSystem(ms:"Standard")}, label: {
                     Text("Std")
-                }
-                Button(action: {SetMeasureSystem(ms:"Metric")}) {
-                    Text("Metric")
-                }
-            }
+                        .background(measureSystem == "Standard" ? Color.blue : Color.white)
+                        .foregroundColor(measureSystem == "Standard" ? Color.white : Color.blue)
+                })
+                .padding(.horizontal)
+                Button(action: {SetMeasureSystem(ms:"Metric")}, label: {
+                    Text("Metric").background(measureSystem == "Metric" ? Color.blue : Color.white)
+                        .foregroundColor(measureSystem == "Metric" ? Color.white : Color.blue)
+                })
+                .padding(.horizontal)
+            }.padding(.bottom)
             HStack {
-                Button(action:{SetBar(barType: 0)}) {
+                Button(action:{SetBar(barType: 0)}, label: {
                     Text(GetBarLabel(barType: 0))
-                }
-                Button(action:{SetBar(barType: 1)}) {
+                        .background(IsBarSelected(barType: 0) ? Color.blue : Color.white)
+                        .foregroundColor(IsBarSelected(barType: 0) ? Color.white : Color.blue)
+                })
+                .padding(.horizontal)
+                Button(action:{SetBar(barType: 1)}, label: {
                     Text(GetBarLabel(barType: 1))
-                }
-                Button(action:{SetBar(barType: 2)}) {
+                        .background(IsBarSelected(barType: 1) ? Color.blue : Color.white)
+                        .foregroundColor(IsBarSelected(barType: 1) ? Color.white : Color.blue)
+                })
+                .padding(.horizontal)
+                Button(action:{SetBar(barType: 2)}, label: {
                     Text(GetBarLabel(barType: 2))
-                }
+                        .background(IsBarSelected(barType: 2)  ? Color.blue : Color.white)
+                        .foregroundColor(IsBarSelected(barType: 2) ? Color.white : Color.blue)
+                })
+                .padding(.horizontal)
             }
+            .padding(.horizontal, 15.0)
+            
             VStack {
                 HStack {
                     HStack {
@@ -90,7 +110,7 @@ struct PlateView: View {
                     HStack {
                         Toggle("", isOn:$weightIsOn[4])
                         ZStack {
-                            Circle().frame(width:60, height:60).foregroundColor(.black)
+                            Circle().strokeBorder(Color.white).frame(width:60, height:60).foregroundColor(.black)
                             Text(GetWeightLabel(weightNum: 4)).foregroundColor(.white)
                         }
                         Text("\(weightCount[4])")
@@ -98,7 +118,7 @@ struct PlateView: View {
                     HStack {
                         Toggle("", isOn:$weightIsOn[5])
                         ZStack {
-                            Circle().strokeBorder(Color.black).frame(width:60, height:60).foregroundColor(.white)
+                            Circle().strokeBorder(Color.black).background(Color(UIColor.white)).frame(width:60, height:60).foregroundColor(.white)
                             Text(GetWeightLabel(weightNum: 5)).foregroundColor(.black)
                         }
                         Text("\(weightCount[5])")
@@ -123,17 +143,36 @@ struct PlateView: View {
                     }
                 }
                 HStack {
-                    Toggle("", isOn:$weightIsOn[8])
-                    ZStack {
-                        Circle().strokeBorder(Color.black).frame(width:60, height:60).foregroundColor(.white)
-                        Text(GetWeightLabel(weightNum: 8)).foregroundColor(.black)
+                    HStack {
+                        Toggle("", isOn:$weightIsOn[8])
+                        ZStack {
+                            Circle().strokeBorder(Color.black).frame(width:60, height:60).foregroundColor(.white).background(Color(UIColor.white))
+                            Text(GetWeightLabel(weightNum: 8)).foregroundColor(.black)
+                        }
+                        Text("\(weightCount[8])")
                     }
-                    Text("\(weightCount[8])")
+                    HStack {
+                        
+                    }
                 }
             }
+            .padding([.bottom, .trailing])
         }
     }
     
+    func IsBarSelected(barType:Int) -> Bool {
+        if("Standard" == measureSystem) {
+            if(barWeight == standardBars[barType]) {
+                return true
+            }
+        } else {
+            if(barWeight == metricBars[barType]) {
+                return true
+            }
+        }
+        
+        return false
+    }
     func SetMeasureSystem(ms:String) {
         if("Standard" == ms) {
             isStandard = true
@@ -179,6 +218,40 @@ struct PlateView: View {
             barWeight = metricBars[barType]
             symbol = "kg"
         }
+    }
+    func GetPlateWeight(weightIndex:Int) -> Float {
+        if("Standard" == measureSystem) {
+            return standardWeights[weightIndex]
+        } else {
+            return metricWeights[weightIndex]
+        }
+    }
+    func ClearPlateCounts() {
+        for index:Int in 0...8 {
+            weightCount[index] = 0
+        }
+    }
+    func CalcPlatesNeeded() {
+        hideKeyboard()
+        ClearPlateCounts()
+
+        var weightRemaining:Float = Float(weight) - barWeight
+        
+        for index:Int in 0...8 {
+            if(weightRemaining > 1) {
+                if(true == weightIsOn[index]) {
+                    let plateWeight = GetPlateWeight(weightIndex: index) * 2
+                    let numPlates:Int = Int(weightRemaining / plateWeight)
+                    if(0 != numPlates) {
+                        weightCount[index] = numPlates
+                        weightRemaining = weightRemaining - (plateWeight*Float(numPlates))
+                    }
+                }
+            }
+        }
+    }
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 
