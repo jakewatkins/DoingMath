@@ -37,33 +37,33 @@ struct PlateView: View {
             HStack(spacing: 10.0) {
                 Button(action: {SetMeasureSystem(ms:"Standard")}, label: {
                     Text("Std")
-                        .background(measureSystem == "Standard" ? Color.blue : Color.white)
-                        .foregroundColor(measureSystem == "Standard" ? Color.white : Color.blue)
+                        .background(measureSystem == "Standard" ? Color.blue : Color(UIColor.systemBackground))
+                        .foregroundColor(measureSystem == "Standard" ? Color.black : Color.blue)
                 })
                 .padding(.horizontal)
                 Button(action: {SetMeasureSystem(ms:"Metric")}, label: {
-                    Text("Metric").background(measureSystem == "Metric" ? Color.blue : Color.white)
-                        .foregroundColor(measureSystem == "Metric" ? Color.white : Color.blue)
+                    Text("Metric").background(measureSystem == "Metric" ? Color.blue : Color(UIColor.systemBackground))
+                        .foregroundColor(measureSystem == "Metric" ? Color.black : Color.blue)
                 })
                 .padding(.horizontal)
             }.padding(.bottom)
             HStack {
                 Button(action:{SetBar(barType: 0)}, label: {
                     Text(GetBarLabel(barType: 0))
-                        .background(IsBarSelected(barType: 0) ? Color.blue : Color.white)
-                        .foregroundColor(IsBarSelected(barType: 0) ? Color.white : Color.blue)
+                        .background(IsBarSelected(barType: 0) ? Color.blue : Color(UIColor.systemBackground))
+                        .foregroundColor(IsBarSelected(barType: 0) ? Color.black : Color.blue)
                 })
                 .padding(.horizontal)
                 Button(action:{SetBar(barType: 1)}, label: {
                     Text(GetBarLabel(barType: 1))
-                        .background(IsBarSelected(barType: 1) ? Color.blue : Color.white)
-                        .foregroundColor(IsBarSelected(barType: 1) ? Color.white : Color.blue)
+                        .background(IsBarSelected(barType: 1) ? Color.blue : Color(UIColor.systemBackground))
+                        .foregroundColor(IsBarSelected(barType: 1) ? Color.black : Color.blue)
                 })
                 .padding(.horizontal)
                 Button(action:{SetBar(barType: 2)}, label: {
                     Text(GetBarLabel(barType: 2))
-                        .background(IsBarSelected(barType: 2)  ? Color.blue : Color.white)
-                        .foregroundColor(IsBarSelected(barType: 2) ? Color.white : Color.blue)
+                        .background(IsBarSelected(barType: 2)  ? Color.blue : Color(UIColor.systemBackground))
+                        .foregroundColor(IsBarSelected(barType: 2) ? Color.black : Color.blue)
                 })
                 .padding(.horizontal)
             }
@@ -110,7 +110,11 @@ struct PlateView: View {
                     HStack {
                         Toggle("", isOn:$weightIsOn[4])
                         ZStack {
-                            Circle().strokeBorder(Color.white).frame(width:60, height:60).foregroundColor(.black)
+                            Circle()
+                                .overlay(
+                                    Circle()
+                                        .stroke(Color.white, lineWidth:2)
+                                ).foregroundColor(.black).frame(width:60,height:60)
                             Text(GetWeightLabel(weightNum: 4)).foregroundColor(.white)
                         }
                         Text("\(weightCount[4])")
@@ -118,7 +122,11 @@ struct PlateView: View {
                     HStack {
                         Toggle("", isOn:$weightIsOn[5])
                         ZStack {
-                            Circle().strokeBorder(Color.black).background(Color(UIColor.white)).frame(width:60, height:60).foregroundColor(.white)
+                            Circle()
+                                .overlay(
+                                    Circle()
+                                        .stroke(Color.black, lineWidth:2)
+                                ).foregroundColor(.white).frame(width:60,height:60)
                             Text(GetWeightLabel(weightNum: 5)).foregroundColor(.black)
                         }
                         Text("\(weightCount[5])")
@@ -146,7 +154,11 @@ struct PlateView: View {
                     HStack {
                         Toggle("", isOn:$weightIsOn[8])
                         ZStack {
-                            Circle().strokeBorder(Color.black).frame(width:60, height:60).foregroundColor(.white).background(Color(UIColor.white))
+                            Circle()
+                                .overlay(
+                                    Circle()
+                                        .stroke(Color.black, lineWidth:2)
+                                ).foregroundColor(.white).frame(width:60,height:60)
                             Text(GetWeightLabel(weightNum: 8)).foregroundColor(.black)
                         }
                         Text("\(weightCount[8])")
@@ -187,8 +199,14 @@ struct PlateView: View {
     func GetWeightLabel(weightNum:Int) -> String {
         if(weightNum < 9) {
             if("Standard" == measureSystem) {
+                if(standardWeights[weightNum] == 2.5) {
+                    return "2.5"
+                }
                 return String(format:"%.0f", standardWeights[weightNum])
             } else {
+                if(metricWeights[weightNum] == 0.5) {
+                    return ".5"
+                }
                 return String(format:"%.0f", metricWeights[weightNum])
             }
         }
