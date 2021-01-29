@@ -145,6 +145,7 @@ struct ContentView: View {
                 PlateView()
             }.tabItem { Text("Plate") }
         }
+        .padding(.horizontal)
     }
     
     func SetMeasureSystem(ms:String) {

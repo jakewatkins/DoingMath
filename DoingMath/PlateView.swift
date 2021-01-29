@@ -28,7 +28,7 @@ struct PlateView: View {
         VStack {
             HStack {
                 Text("Weight")
-                NumberTextField(value: $weight)
+                NumberTextField(value: $weight).frame(height:50)
             }
             Button(action:{CalcPlatesNeeded()}) {
                 Text("Calculate")
@@ -169,7 +169,7 @@ struct PlateView: View {
                 }
             }
             .padding([.bottom, .trailing])
-        }
+        }.padding(.horizontal)
     }
     
     func IsBarSelected(barType:Int) -> Bool {
