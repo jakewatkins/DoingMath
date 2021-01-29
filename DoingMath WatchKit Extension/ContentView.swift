@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var totalWeight = 0
     @State var barSelected = false
     @State var symbol = "#"
+    @State var barWeight = 0
     
     let standardBar:[Int] = [45,35,15]
     let metricBar:[Int] = [20, 15, 7]
@@ -24,22 +25,30 @@ struct ContentView: View {
                 // todo: change this to a slider
                 HStack {
                     Button(action: {IsStandard(isStandard: true)}) {
-                        Text("Std")
+                        Text("Std").background(standard == true ? Color.blue : Color.black)
+                            .foregroundColor(standard == true ? Color.black : Color.white)
                     }
                     Button(action: {IsStandard(isStandard: false)}) {
-                        Text("Metric")
+                        Text("Metric").background(standard == false ? Color.blue : Color.black)
+                            .foregroundColor(standard == false ? Color.black : Color.white)
                     }
                 }.padding()
                 Text("Bar Type")
                 HStack {
                     Button(action:{SetBar(barType: GetBarValue(barNum: 0))}) {
                         Text(GetBarLabel(barNum: 0))
+                            .background(barWeight == 45 ? Color.blue : Color.black)
+                            .foregroundColor(barWeight == 45 ? Color.black : Color.white)
                     }
                     Button(action:{SetBar(barType: GetBarValue(barNum: 1))}) {
                         Text(GetBarLabel(barNum: 1))
+                            .background(barWeight == 35 ? Color.blue : Color.black)
+                            .foregroundColor(barWeight == 35 ? Color.black : Color.white)
                     }
                     Button(action:{SetBar(barType: GetBarValue(barNum: 2))}) {
                         Text(GetBarLabel(barNum: 2))
+                            .background(barWeight == 15 ? Color.blue : Color.black)
+                            .foregroundColor(barWeight == 15 ? Color.black : Color.white)
                     }
                 }
             }
@@ -174,7 +183,9 @@ struct ContentView: View {
     
     func SetBar(barType:Int) {
         totalWeight = barType
+        barWeight = barType
         barSelected = true
+        
         if(true == standard) {
             symbol = "#"
         } else {
@@ -183,6 +194,7 @@ struct ContentView: View {
     }
     
     func Reset() {
+        barWeight = 0
         totalWeight = 0
         barSelected = false
     }
