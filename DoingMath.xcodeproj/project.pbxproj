@@ -19,6 +19,8 @@
 		37A8C8A525BDE87700FD3D9F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8C8A425BDE87700FD3D9F /* ComplicationController.swift */; };
 		37A8C8A725BDE87700FD3D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A8C8A625BDE87700FD3D9F /* Assets.xcassets */; };
 		37A8C8AA25BDE87700FD3D9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A8C8A925BDE87700FD3D9F /* Preview Assets.xcassets */; };
+		37D3151125C19D6F005DBD0B /* PlateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D3151025C19D6F005DBD0B /* PlateView.swift */; };
+		37D3151625C1A3EA005DBD0B /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D3151525C1A3EA005DBD0B /* NumberTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		37A8C8A625BDE87700FD3D9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37A8C8A925BDE87700FD3D9F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37A8C8AB25BDE87700FD3D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37D3151025C19D6F005DBD0B /* PlateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateView.swift; sourceTree = "<group>"; };
+		37D3151525C1A3EA005DBD0B /* NumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 				37A8C88725BDE87600FD3D9F /* Assets.xcassets */,
 				37A8C88C25BDE87600FD3D9F /* Info.plist */,
 				37A8C88925BDE87600FD3D9F /* Preview Content */,
+				37D3151025C19D6F005DBD0B /* PlateView.swift */,
+				37D3151525C1A3EA005DBD0B /* NumberTextField.swift */,
 			);
 			path = DoingMath;
 			sourceTree = "<group>";
@@ -302,6 +308,8 @@
 			files = (
 				37A8C88625BDE87400FD3D9F /* ContentView.swift in Sources */,
 				37A8C88425BDE87400FD3D9F /* DoingMathApp.swift in Sources */,
+				37D3151625C1A3EA005DBD0B /* NumberTextField.swift in Sources */,
+				37D3151125C19D6F005DBD0B /* PlateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"DoingMath WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 8YCWAW89BH;
 				ENABLE_PREVIEWS = YES;
@@ -456,13 +465,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GuerillaProgrammer.DoingMath.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Debug;
 		};
@@ -471,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"DoingMath WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 8YCWAW89BH;
 				ENABLE_PREVIEWS = YES;
@@ -480,6 +491,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GuerillaProgrammer.DoingMath.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -487,7 +499,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Release;
 		};
@@ -507,7 +519,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Debug;
 		};
@@ -528,7 +540,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Release;
 		};
@@ -542,7 +554,7 @@
 				DEVELOPMENT_TEAM = 8YCWAW89BH;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DoingMath/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -565,7 +577,7 @@
 				DEVELOPMENT_TEAM = 8YCWAW89BH;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DoingMath/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
